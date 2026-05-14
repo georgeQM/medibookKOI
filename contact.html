@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Book — MediBook</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <header>
+    <nav aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Medi<span>Book</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="media.html">Gallery</a></li>
+          <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="section-tag" style="background:rgba(255,255,255,0.2); color:#fff;">Get in Touch</span>
+        <h1>Book an Appointment</h1>
+        <p>Fill in the form below and we'll confirm your appointment within one business day.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT LAYOUT -->
+    <section class="section">
+      <div class="container contact-layout">
+
+        <!-- FORM -->
+        <div class="contact-form-wrap">
+          <h2>Appointment Request</h2>
+          <p style="color:var(--text-muted); margin-bottom:1.5rem; font-size:0.95rem;">All fields marked with * are required.</p>
+
+          <form id="booking-form" novalidate aria-label="Appointment booking form">
+
+            <div class="grid-2" style="gap:1rem;">
+              <div class="form-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first-name" autocomplete="given-name" required aria-required="true" aria-describedby="first-name-error" />
+                <span class="field-error" id="first-name-error" role="alert">Please enter your first name.</span>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last-name" autocomplete="family-name" required aria-required="true" aria-describedby="last-name-error" />
+                <span class="field-error" id="last-name-error" role="alert">Please enter your last name.</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" autocomplete="email" required aria-required="true" aria-describedby="email-error" />
+              <span class="field-error" id="email-error" role="alert">Please enter a valid email address.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="04XX XXX XXX" required aria-required="true" aria-describedby="phone-error" />
+              <span class="field-error" id="phone-error" role="alert">Please enter a valid Australian phone number.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="dob">Date of Birth *</label>
+              <input type="date" id="dob" name="dob" required aria-required="true" aria-describedby="dob-error" />
+              <span class="field-error" id="dob-error" role="alert">Please enter your date of birth.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service Required *</label>
+              <select id="service" name="service" required aria-required="true" aria-describedby="service-error">
+                <option value="">— Select a service —</option>
+                <option value="gp">General Practice</option>
+                <option value="specialist">Specialist Consultation</option>
+                <option value="mental-health">Mental Health</option>
+                <option value="preventive">Preventive Care</option>
+                <option value="womens">Women's Health</option>
+                <option value="telehealth">Telehealth</option>
+              </select>
+              <span class="field-error" id="service-error" role="alert">Please select a service.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="preferred-date">Preferred Date *</label>
+              <input type="date" id="preferred-date" name="preferred-date" required aria-required="true" aria-describedby="date-error" />
+              <span class="field-error" id="date-error" role="alert">Please select a preferred appointment date.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="preferred-time">Preferred Time *</label>
+              <select id="preferred-time" name="preferred-time" required aria-required="true" aria-describedby="time-error">
+                <option value="">— Select a time —</option>
+                <option value="morning">Morning (8am – 12pm)</option>
+                <option value="afternoon">Afternoon (12pm – 5pm)</option>
+                <option value="evening">Evening (5pm – 7pm)</option>
+              </select>
+              <span class="field-error" id="time-error" role="alert">Please select a preferred time.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Additional Notes</label>
+              <textarea id="message" name="message" rows="4" placeholder="Describe your symptoms or reason for visit (optional)" aria-describedby="message-hint"></textarea>
+              <span id="message-hint" style="font-size:0.8rem; color:var(--text-muted);">Max 500 characters.</span>
+            </div>
+
+            <div class="form-group" style="display:flex; align-items:flex-start; gap:0.75rem;">
+              <input type="checkbox" id="privacy" name="privacy" required aria-required="true" aria-describedby="privacy-error" style="width:auto; margin-top:4px;" />
+              <div>
+                <label for="privacy" style="display:inline; font-weight:400;">I agree to the <a href="#">Privacy Policy</a> and consent to my details being used to process this booking. *</label>
+                <span class="field-error" id="privacy-error" role="alert" style="display:block;">You must agree to the privacy policy.</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">Submit Booking Request</button>
+
+            <!-- SUCCESS MESSAGE -->
+            <div class="form-success" id="form-success" hidden role="status" aria-live="polite">
+              <span aria-hidden="true">✅</span>
+              <strong>Booking request received!</strong>
+              <p>Thank you. We'll confirm your appointment via email within one business day.</p>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <aside class="contact-info" aria-label="Contact information">
+          <h2>Contact Us</h2>
+
+          <div class="info-block">
+            <div class="info-icon" aria-hidden="true">📍</div>
+            <div>
+              <h3>Address</h3>
+              <p>123 Health Street<br />Sydney NSW 2000<br />Australia</p>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-icon" aria-hidden="true">📞</div>
+            <div>
+              <h3>Phone</h3>
+              <a href="tel:+61299990000">+61 2 9999 0000</a>
+              <p style="font-size:0.85rem; color:var(--text-muted);">Mon–Fri 8am–6pm, Sat 8am–1pm</p>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-icon" aria-hidden="true">✉️</div>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:hello@medibook.com.au">hello@medibook.com.au</a>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-icon" aria-hidden="true">🕐</div>
+            <div>
+              <h3>Opening Hours</h3>
+              <table class="hours-table" aria-label="Opening hours">
+                <tr><td>Monday – Friday</td><td>8am – 6pm</td></tr>
+                <tr><td>Saturday</td><td>8am – 1pm</td></tr>
+                <tr><td>Sunday</td><td>Closed</td></tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-icon" aria-hidden="true">🌐</div>
+            <div>
+              <h3>Follow Us</h3>
+              <div class="social-links">
+                <a href="#" aria-label="MediBook on Facebook">Facebook</a>
+                <a href="#" aria-label="MediBook on Instagram">Instagram</a>
+                <a href="#" aria-label="MediBook on LinkedIn">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>MediBook</strong>
+        <p>Online appointment booking for clinics across Australia.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="media.html">Gallery</a>
+        <a href="contact.html">Contact & Book</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@medibook.com.au">hello@medibook.com.au</a>
+        <a href="tel:+61299990000">+61 2 9999 0000</a>
+        <p style="font-size:0.85rem; color:#aaa; margin-top:0.5rem;">123 Health St, Sydney NSW 2000</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MediBook. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
