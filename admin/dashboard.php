@@ -55,7 +55,7 @@ $recent = $pdo->query("
   <header>
     <nav aria-label="Main navigation">
       <div class="nav-inner">
-        <a href="../index.html" class="nav-logo">Medi<span>Book</span></a>
+        <a href="../index.php" class="nav-logo">Medi<span>Book</span></a>
         <ul class="nav-links" role="list">
           <li><a href="dashboard.php">Admin</a></li>
           <li><a href="users.php">Users</a></li>

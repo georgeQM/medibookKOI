@@ -12,11 +12,11 @@
   <header>
     <nav aria-label="Main navigation">
       <div class="nav-inner">
-        <a href="/medibook/index.html" class="nav-logo">Medi<span>Book</span></a>
+        <a href="/medibook/index.php" class="nav-logo">Medi<span>Book</span></a>
         <ul class="nav-links" role="list">
-          <li><a href="/medibook/index.html">Home</a></li>
-          <li><a href="/medibook/services.html">Services</a></li>
-          <li><a href="/medibook/contact.html" class="nav-cta">Book Now</a></li>
+          <li><a href="/medibook/index.php">Home</a></li>
+          <li><a href="/medibook/services.php">Services</a></li>
+          <li><a href="/medibook/contact.php" class="nav-cta">Book Now</a></li>
         </ul>
       </div>
     </nav>
@@ -27,7 +27,7 @@
         <span style="font-size:4rem;">🏥</span>
         <h1>404 — Page Not Found</h1>
         <p>The page you're looking for doesn't exist or has been moved.</p>
-        <a href="/medibook/index.html" class="btn btn-white" style="margin-top:1rem;">Back to Home</a>
+        <a href="/medibook/index.php" class="btn btn-white" style="margin-top:1rem;">Back to Home</a>
       </div>
     </section>
   </main>

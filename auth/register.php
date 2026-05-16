@@ -4,7 +4,7 @@ require_once __DIR__ . '/../config/db.php';
 
 // Already logged in → redirect to their dashboard
 if (isset($_SESSION['user_id'])) {
-    header('Location: ../index.html');
+    header('Location: ../index.php');
     exit;
 }
 
@@ -63,12 +63,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <header>
     <nav aria-label="Main navigation">
       <div class="nav-inner">
-        <a href="../index.html" class="nav-logo">Medi<span>Book</span></a>
+        <a href="../index.php" class="nav-logo">Medi<span>Book</span></a>
         <ul class="nav-links" role="list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../services.html">Services</a></li>
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../contact.html" class="nav-cta">Book Now</a></li>
+          <li><a href="../index.php">Home</a></li>
+          <li><a href="../services.php">Services</a></li>
+          <li><a href="../about.php">About</a></li>
+          <li><a href="../contact.php" class="nav-cta">Book Now</a></li>
         </ul>
       </div>
     </nav>
